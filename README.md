@@ -1,12 +1,26 @@
-# skill-publisher
+# skill-publisher / Skill 发布器 / Skill 上传工具 / Skill 共享助手
 
 > **Meta-skill**:把 Agent Skill 从本地草稿发布到 GitHub 的流水线编排者
+
+**中文别名**:`Skill 发布器` / `Skill 上传工具` / `Skill 共享助手` — 中文用户搜这些关键词也能找到。
+
+**English**: `skill-publisher` / `Skill Publisher` / `agent skill publisher`
 
 `skill-publisher` 是一个**监督 skill 上传 GitHub 的 skill**(meta-skill)。它让你**一键**完成:校验 SKILL.md 格式 → 生成 README/LICENSE → 初始化 git 仓库 → 用 gh CLI 推 GitHub → 可选 PR 到社区聚合。
 
 ## 为什么需要它
 
-GitHub 上**已经有 33,000+ Agent Skills**(见 [Skillsmp](https://skillsmp.com)),但**没有人**做过"校验 + 推 GitHub + 自动写 README"的完整 pipeline。常见痛点:
+GitHub 上**已经有 33,000+ Agent Skills**(见 [Skillsmp](https://skillsmp.com))。但生态已经分得很清楚:
+
+| 类别 | 已有项目 | 安装量 | 我们补什么 |
+|---|---|---|---|
+| 🔍 **Discover** | `vercel-labs/skills` 的 `find-skills` | **579K,生态第一** | — 不重复造轮子 |
+| 🛠️ **Create** | `anthropics/skill-creator` | 37K | — 不重复造轮子 |
+| 📦 **Install** | `npx skills add`(Vercel) | npm 级别 | — 不重复造轮子 |
+| 🛒 **Marketplace** | `skills.sh` / `Skillsmp` / `clawhub.ai` | 流量大 | — 不重复造轮子 |
+| 🚀 **Publish**(校验 + README + 推 GitHub) | ❌ **没有** | — | ✅ **唯一空白** |
+
+常见痛点(我们的解药):
 
 - ❌ SKILL.md 写得不规范,Anthropic 标准检查 5 要素没人做
 - ❌ 推到 GitHub 后忘了加 README / LICENSE

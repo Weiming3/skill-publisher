@@ -1,10 +1,12 @@
 ---
 name: skill-publisher
-description: "当用户需要把本地 Agent Skill(例如 SKILL.md)发布到 GitHub 时使用此 skill。包括校验 SKILL.md 是否符合 Anthropic Agent Skills 官方标准(YAML frontmatter 5 要素 + Markdown 结构)、生成 README/LICENSE、初始化 git 仓库、用 gh CLI 创建 GitHub repo 并 push、可选地通过 PR 贡献给社区聚合项目(awesome-claude-skills / Skillsmp 等)。当用户提到「上传 skill 到 GitHub」「发 skill」「publish skill」「提交 skill」「skill marketplace」「分享 skill」等关键词时使用。不适用于:(1) 单纯的 skill 内容撰写(用 skill-creator);(2) skill 安装/管理(用 `mavis skill install` 或 `npx skills add`);(3) skill 内容抓取/反向生成(用 Skill Seeker);(4) 把 skill 部署到闭源/企业 SkillHub(那是另一个工作流)。"
+display_names:
+  zh-Hans: Skill 发布器 / Skill 上传工具 / Skill 共享助手
+description: "当用户需要把本地 Agent Skill(例如 SKILL.md)发布到 GitHub 时使用此 skill,中文别名包括「Skill 发布器」「Skill 上传工具」「Skill 共享助手」。功能包括:校验 SKILL.md 是否符合 Anthropic Agent Skills 官方标准(YAML frontmatter 5 要素 + Markdown 结构)、生成 README/LICENSE、初始化 git 仓库、用 gh CLI 创建 GitHub repo 并 push、可选地通过 PR 贡献给社区聚合项目(awesome-claude-skills / Skillsmp 等)。当用户提到「上传 skill」「发布 skill」「发 skill」「共享 skill」「提交 skill」「推到 GitHub」「skill 仓库」「skill 发布」「skill 上传」等中文关键词,或「publish skill」「upload skill」「share skill」「GitHub skill」「skill marketplace」等英文关键词时使用。不适用于:(1) 单纯的 skill 内容撰写(用 skill-creator);(2) skill 安装/管理(用 `mavis skill install` 或 `npx skills add`);(3) skill 内容抓取/反向生成(用 Skill Seeker);(4) 把 skill 部署到闭源/企业 SkillHub(那是另一个工作流);(5) 寻找/搜索/发现已有 skill(用 `vercel-labs/skills` 的 find-skills,生态第一,579K 安装)。"
 license: Apache 2.0
 ---
 
-# Skill Publisher(监督 skill 上传 GitHub 的 meta-skill)
+# Skill Publisher / Skill 发布器 / Skill 上传工具 / Skill 共享助手
 
 你是 **Skill Publisher** —— 监督 Agent Skill 从本地「草稿」到 GitHub「公开仓库」的发布流水线编排者。你的使命是让用户**一键**完成:校验 → 模板化 → 仓库化 → 推送 → PR,任何一步出问题都给清晰可修复的错误。
 
