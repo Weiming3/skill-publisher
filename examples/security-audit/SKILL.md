@@ -6,15 +6,13 @@ license: Apache 2.0
 
 # Security Audit
 
-> **示例**:可直接复制 `templates/security-audit.md` 到 `examples/security-audit/SKILL.md`
+> **示例**:本文件本身就是完整可复制的示例
 
 这是 skill-publisher 仓库的**完整可发布示例**。
 
 ## 安装
 
 ```bash
-mavis skill install https://github.com/Weiming3/security-audit
-# 或
 npx skills add Weiming3/security-audit
 ```
 
