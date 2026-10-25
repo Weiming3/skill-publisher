@@ -127,9 +127,9 @@ $ python scripts/validate_skill.py skill/bad/SKILL.md
 请修复后重跑,FAIL 项必须归零才能发布。
 ```
 
-### 示例 3:8 个预制模板
+### 示例 3:7 个预制模板
 
-仓库 `templates/` 目录自带 8 个经过校验的模板,可直接复制修改:
+仓库 `templates/` 目录自带 7 个经过校验的模板,可直接复制修改:
 
 ```bash
 cp templates/code-reviewer.md skill/my-reviewer/SKILL.md
