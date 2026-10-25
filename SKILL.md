@@ -2,7 +2,7 @@
 name: skill-publisher
 display_names:
   zh-Hans: Skill 发布器 / Skill 上传工具 / Skill 共享助手
-description: "当用户需要把本地 Agent Skill(例如 SKILL.md)发布到 GitHub 时使用此 skill,中文别名包括「Skill 发布器」「Skill 上传工具」「Skill 共享助手」。功能包括:校验 SKILL.md 是否符合 Anthropic Agent Skills 官方标准(YAML frontmatter 5 要素 + Markdown 结构)、生成 README/LICENSE、初始化 git 仓库、用 gh CLI 创建 GitHub repo 并 push、可选地通过 PR 贡献给社区聚合项目(awesome-claude-skills / Skillsmp 等)。当用户提到「上传 skill」「发布 skill」「发 skill」「共享 skill」「提交 skill」「推到 GitHub」「skill 仓库」「skill 发布」「skill 上传」等中文关键词,或「publish skill」「upload skill」「share skill」「GitHub skill」「skill marketplace」等英文关键词时使用。不适用于:(1) 单纯的 skill 内容撰写(用 skill-creator);(2) skill 安装/管理(用 `mavis skill install` 或 `npx skills add`);(3) skill 内容抓取/反向生成(用 Skill Seeker);(4) 把 skill 部署到闭源/企业 SkillHub(那是另一个工作流);(5) 寻找/搜索/发现已有 skill(用 `vercel-labs/skills` 的 find-skills,生态第一,579K 安装)。"
+description: "当用户需要把本地 Agent Skill(例如 SKILL.md)发布到 GitHub 时使用此 skill,中文别名包括「Skill 发布器」「Skill 上传工具」「Skill 共享助手」。功能包括:校验 SKILL.md 是否符合 Anthropic Agent Skills 官方标准(YAML frontmatter 5 要素 + Markdown 结构)、生成 README/LICENSE、初始化 git 仓库、用 gh CLI 创建 GitHub repo 并 push、可选地通过 PR 贡献给社区聚合项目(awesome-claude-skills / Skillsmp 等)。当用户提到「上传 skill」「发布 skill」「发 skill」「共享 skill」「提交 skill」「推到 GitHub」「skill 仓库」「skill 发布」「skill 上传」等中文关键词,或「publish skill」「upload skill」「share skill」「GitHub skill」「skill marketplace」等英文关键词时使用。不适用于:(1) 单纯的 skill 内容撰写(用 skill-creator);(2) skill 安装/管理(用 `npx skills add` / `npx skills update`);(3) skill 内容抓取/反向生成(用 Skill Seeker);(4) 把 skill 部署到闭源/企业 SkillHub(那是另一个工作流);(5) 寻找/搜索/发现已有 skill(用 `vercel-labs/skills` 的 find-skills,生态第一,579K 安装)。"
 license: Apache 2.0
 ---
 
@@ -132,13 +132,12 @@ $ python scripts/validate_skill.py skill/bad/SKILL.md
 仓库 `templates/` 目录自带 7 个经过校验的模板,可直接复制修改:
 
 ```bash
-cp templates/code-reviewer.md skill/my-reviewer/SKILL.md
+cp templates/security-audit.md skill/my-auditor/SKILL.md
 # 修改 name / description 后,跑 validate
 ```
 
 | 模板 | 用途 |
 |---|---|
-| `templates/code-reviewer.md` | 代码审查与重构 |
 | `templates/security-audit.md` | 安全扫描与敏感信息检测 |
 | `templates/unit-test-generator.md` | 单元测试生成 |
 | `templates/doc-writer.md` | README/技术文档生成 |
@@ -162,7 +161,7 @@ cp templates/code-reviewer.md skill/my-reviewer/SKILL.md
 
 ### 关键警告
 
-⚠️ `gh` CLI 必须先 `gh auth login --web` 一次,Mavis agent 才能 push
+⚠️ `gh` CLI 必须先 `gh auth login --web` 一次,Skills CLI 才能 push
 ⚠️ `name` 字段如果含大写,gh repo create 会失败 — 必须小写连字符
 ⚠️ 如果 skill 含 `triggers:` 字段,部分平台(OpenAI Codex)会忽略 — 兼容写法是把它放进 description
 
@@ -185,5 +184,5 @@ cp templates/code-reviewer.md skill/my-reviewer/SKILL.md
 
 ### 本仓库作者
 - 原始输入:Trae 教程 + CSDN 流传的 8 大 skill 模板
-- 实现:Mavis agent(基于 Anthropic Agent Skills 标准)
+- 实现:Skills CLI(基于 Anthropic Agent Skills 标准)
 - 维护:Weiming3
