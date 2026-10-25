@@ -37,7 +37,7 @@ GitHub 上**已经有 33,000+ Agent Skills**(见 [Skillsmp](https://skillsmp.com
 | 📝 **自动生成 README** | 从 SKILL.md frontmatter 抽取,加 install / 使用章节 |
 | 📜 **多 license 支持** | Apache 2.0 / MIT / Proprietary 自动选模板 |
 | 🚀 **gh CLI 一键 push** | 检测认证 + 交互式确认 + `--public` 必须显式 |
-| 🎁 **8 个预制模板** | code-reviewer / security-audit / unit-test-generator 等 |
+| 🎁 **7 个预制模板** | security-audit / unit-test-generator / chinese-comment-style 等 |
 | 🌐 **社区 PR**(可选) | 自动 PR 到 awesome-claude-skills / anthropics/skills |
 
 ## 安装
@@ -111,13 +111,12 @@ python scripts/publish.py --name code-reviewer --source ./my-skill --dry-run
 bash scripts/init_and_publish.sh code-reviewer Weiming3 public
 ```
 
-## 8 个预制模板
+## 7 个预制模板
 
-仓库 `templates/` 目录包含 **8 个经过校验**的模板,可直接复制修改:
+仓库 `templates/` 目录包含 **7 个经过校验**的模板,可直接复制修改:
 
 | 模板 | 用途 | 优先级 |
 |---|---|---|
-| `code-reviewer.md` | 代码审查与重构 | 🔥 高 |
 | `security-audit.md` | 安全扫描与敏感信息检测 | 🔥 高 |
 | `chinese-comment-style.md` | 中文注释规范 | 🔥 高 |
 | `unit-test-generator.md` | 单元测试生成 | ⚪ 中 |
@@ -128,7 +127,7 @@ bash scripts/init_and_publish.sh code-reviewer Weiming3 public
 
 **使用模板**:
 ```bash
-cp templates/code-reviewer.md ./my-reviewer/SKILL.md
+cp templates/security-audit.md ./my-auditor/SKILL.md
 # 修改 name / description 后,跑 validate
 ```
 
@@ -188,8 +187,7 @@ skill-publisher/
 │   ├── validate_skill.py         # 8 项校验
 │   ├── publish.py                # 完整发布流程
 │   └── init_and_publish.sh       # 一键脚本
-├── templates/                    # 8 个预制模板
-│   ├── code-reviewer.md
+├── templates/                    # 7 个预制模板
 │   ├── security-audit.md
 │   ├── unit-test-generator.md
 │   ├── doc-writer.md
