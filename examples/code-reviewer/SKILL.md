@@ -6,15 +6,13 @@ license: Apache 2.0
 
 # Code Reviewer
 
-> **示例**:可直接复制 `templates/code-reviewer.md` 到 `examples/code-reviewer/SKILL.md`
+> **示例**:本文件本身就是完整可复制的示例
 
 这是 skill-publisher 仓库的**完整可发布示例**。
 
 ## 安装
 
 ```bash
-mavis skill install https://github.com/Weiming3/code-reviewer
-# 或
 npx skills add Weiming3/code-reviewer
 ```
 
@@ -22,7 +20,7 @@ npx skills add Weiming3/code-reviewer
 
 触发关键词:`代码审查` / `code review` / `找 bug` / `重构` 等。
 
-详见 `templates/code-reviewer.md` 完整版本(包含核心能力 / 关键规则 / 工作流程 / 使用示例)。
+结构参考:`examples/security-audit/SKILL.md`。
 
 ## License
 
