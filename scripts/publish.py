@@ -121,11 +121,6 @@ def generate_readme(fm: dict, body: str) -> str:
 
 ## 安装
 
-### 通过 `mavis skill install`(Mavis)
-```bash
-mavis skill install https://github.com/<owner>/{name}
-```
-
 ### 通过 `npx skills add`(Claude Code / Codex / Cursor)
 ```bash
 npx skills add <owner>/{name}
@@ -134,7 +129,6 @@ npx skills add <owner>/{name}
 ### 手动安装
 把 `{name}/SKILL.md` 复制到对应平台:
 - Claude Code: `~/.claude/skills/{name}/SKILL.md`
-- Mavis: `~/.mavis/agents/<your-agent>/skills/{name}/SKILL.md`
 - Codex: `~/.codex/skills/{name}/SKILL.md`
 
 ## 使用
