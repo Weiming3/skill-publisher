@@ -42,18 +42,13 @@ GitHub 上**已经有 33,000+ Agent Skills**(见 [Skillsmp](https://skillsmp.com
 
 ## 安装
 
-### 通过 `mavis skill install`(Mavis 平台)
-```bash
-mavis skill install https://github.com/Weiming3/skill-publisher
-```
-
 ### 通过 `npx skills add`(Claude Code / Codex / Cursor)
 ```bash
 npx skills add Weiming3/skill-publisher
 ```
 
 ### 手动
-把 `SKILL.md` 复制到 `~/.mavis/agents/<your-agent>/skills/skill-publisher/SKILL.md`。
+把 `SKILL.md` 复制到 `~/.claude/skills/skill-publisher/SKILL.md`。
 
 ## 使用
 
@@ -222,6 +217,6 @@ Apache 2.0
 
 ## 由谁维护
 
-Weiming3 — 用 Mavis agent + Anthropic Agent Skills 标准构建。
+Weiming3 — 按 Anthropic Agent Skills 标准构建。
 
 原始输入:Trae 教程 + CSDN 流传的 8 大 skill 模板。
