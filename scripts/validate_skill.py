@@ -23,6 +23,12 @@ from pathlib import Path
 
 import yaml  # PyYAML; install via `pip install pyyaml`
 
+try:  # 中文 Windows 控制台默认 GBK，直接输出 ✓ / ⚠ 会抛 UnicodeEncodeError
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+except Exception:  # noqa: BLE001 - 老版本 Python 没有 reconfigure
+    pass
+
 
 # ---------- constants ----------
 
@@ -220,10 +226,17 @@ def validate(path: Path) -> int:
 
 
 def main(argv: list[str]) -> int:
-    if len(argv) < 2:
+    args = argv[1:]
+    if args and args[0] in ("-h", "--help"):
+        print("Usage: python validate_skill.py <SKILL.md|dir>")
+        print()
+        print("校验 SKILL.md 是否符合 Anthropic Agent Skills 标准（8 项检查）。")
+        print("退出码: 0 = 通过, 1 = 有阻塞项, 2 = 文件不存在或解析失败")
+        return 0
+    if not args:
         print("Usage: python validate_skill.py <SKILL.md|dir>", file=sys.stderr)
         return 2
-    return validate(Path(argv[1]))
+    return validate(Path(args[0]))
 
 
 if __name__ == "__main__":
