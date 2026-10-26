@@ -61,3 +61,6 @@ target/
 # Generated files (skill-publisher outputs)
 .cache/
 *.bak
+
+# 运行态与密钥（审计补）
+*.pyc
